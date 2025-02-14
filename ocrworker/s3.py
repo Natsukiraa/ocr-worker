@@ -35,7 +35,7 @@ def get_client() -> BaseClient:
         region_name=settings.aws_region_name,
     )
     # https://stackoverflow.com/questions/26533245/the-authorization-mechanism-you-have-provided-is-not-supported-please-use-aws4  # noqa
-    client = session.client("s3", config=Config(signature_version="s3v4"))
+    client = session.client("s3", config=Config(signature_version="s3v4"),endpoint_url=settings.s3_endpoint_url)
 
     return client
 

@@ -13,6 +13,7 @@ class Settings(BaseSettings):
     aws_access_key_id: str | None = None
     aws_secret_access_key: str | None = None
     aws_region_name: str | None = None
+    s3_endpoint_url: str | None = None
     papermerge__s3__bucket_name: str | None = None
 
 
